@@ -1,0 +1,17 @@
+
+
+
+table ,th,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    width: 31rem;
+     margin: 1rem;
+}
+
+table{
+    display: flex;
+}
+
+.delete-cont{
+    background-color: red;
+}

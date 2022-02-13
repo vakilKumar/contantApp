@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body #root {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-cont{
+   height: 40vh;
+   width: 80vh;
+   display: flex;
+   flex-direction:column;
+  border: 2px solid black;
+     
+}
+
+.add-user{
+    height: 5vh;
+    width: 5vh;
+    margin: 3vh;
+}

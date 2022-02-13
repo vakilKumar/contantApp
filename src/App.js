@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Add from "./component/Add";
+import User from './component/User'
 
 function App() {
+  let [name, setName] = useState("");
+  let[lname, setLname] = useState("");
+  let [mobile, setMobile] = useState("");
+
+  let [data, setData] = useState([]); 
+
+   console.log(data);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Add  name={name}  setName={setName} lname={lname} setLname={setLname}  mobile={mobile}  setMobile={setMobile}
+       data={data} setData={setData}/>
+      {
+        
+      
+      data.map((ele, key )=>{
+        
+        return  <User key={key} idx= {key} name={ele.name} setData={setData} lname={ele.lname} mobile={ele.mobile} data={data}/>
+      }) 
+      
+      }
     </div>
   );
 }
